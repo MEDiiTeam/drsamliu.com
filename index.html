@@ -1,35 +1,981 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dr Sam Liu | Consultant Cardiologist in London</title>
-<meta name="description" content="Dr Sam Liu, Consultant Cardiologist in London. New website coming soon.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>刘医生 Dr Sam Liu｜伦敦心内科主任级医师｜英国心脏专科</title>
+<meta name="description" content="刘医生（Dr Sam Liu），伦敦心内科主任级医师，毕业于伦敦大学学院（UCL）医学院。提供胸痛、心悸、气短、高血压等心脏问题的私人专科门诊与院内心脏检查，中文看诊。">
 <link rel="canonical" href="https://drsamliu.com/">
+<meta property="og:site_name" content="Dr Sam Liu">
+<meta property="og:title" content="刘医生 Dr Sam Liu｜伦敦心内科主任级医师">
+<meta property="og:description" content="您的英国心脏专科顾问。伦敦市中心私人心脏专科门诊与院内心脏检查，中文看诊。">
+<meta property="og:url" content="https://drsamliu.com/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://drsamliu.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#203F39">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23203F39'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='700' text-anchor='middle' fill='%23EADFC8'%3ESL%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Physician",
+  "name": "Dr Sam Liu",
+  "alternateName": "刘医生",
+  "url": "https://drsamliu.com/",
+  "image": "https://drsamliu.com/dr-sam-liu.jpg",
+  "description": "伦敦心内科主任级医师，诊治胸痛、心悸、气短、高血压等心脏问题。",
+  "medicalSpecialty": ["Cardiovascular", "InternalMedicine"],
+  "jobTitle": "Consultant Cardiologist and Medical Director",
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "University College London" },
+  "memberOf": { "@type": "Organization", "name": "Royal College of Physicians" },
+  "knowsLanguage": ["en", "zh"],
+  "sameAs": ["https://www.mediihealth.com/en/team/simiao-liu"],
+  "telephone": "+443335773800",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "18 Duke's Road",
+    "addressLocality": "London",
+    "postalCode": "WC1H 9PY",
+    "addressCountry": "GB"
+  },
+  "worksFor": { "@type": "MedicalClinic", "name": "MEDii Health", "url": "https://www.mediihealth.com/" }
+}
+</script>
+<!--STYLE_START-->
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    min-height: 100vh; display: flex; align-items: center; justify-content: center;
-    font-family: "Avenir Next", "Segoe UI", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
-    background: #FFFFFF; color: #111111; text-align: center; padding: 40px 24px; line-height: 1.6;
+  /* Layout: solid dark-green bands open and close the page; white and warm-grey bands between; burgundy only as accent. */
+  :root {
+    --green: #203F39;
+    --green-deep: #152B27;
+    --red: #7A1E28;
+    --cream: #EADFC8;
+    --paper: #FFFFFF;
+    --tint: #F5F3EE;
+    --line: #E4E1D8;
+    --ink: #1A1F1D;
+    --body: #3A403E;
+    --muted: #6A716E;
+    --on-dark: #FFFFFF;
+    --on-dark-soft: rgba(255, 255, 255, 0.86);
+    --on-dark-faint: rgba(255, 255, 255, 0.62);
+    --shadow: rgba(16, 28, 25, 0.10);
+    --shadow-strong: rgba(8, 18, 16, 0.38);
+    --edit: #C9972B;
+    --edit-wash: rgba(201, 151, 43, 0.16);
+    --gl: max(16px, 6vw, env(safe-area-inset-left, 0px));
+    --gr: max(16px, 6vw, env(safe-area-inset-right, 0px));
+    --font: "Avenir Next", "Segoe UI", "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    color-scheme: light;
   }
-  .k { font-size: 0.8rem; letter-spacing: 0.24em; text-transform: uppercase; color: #555555; margin-bottom: 18px; }
-  h1 { font-size: clamp(2.2rem, 7vw, 3.6rem); letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 18px; }
-  p { color: #444444; font-size: 1.05rem; max-width: 480px; margin: 0 auto 8px; }
-  .rule { width: 56px; height: 3px; background: #111111; margin: 28px auto; }
-  a { color: #111111; font-weight: 600; }
-  .small { font-size: 0.92rem; color: #666666; margin-top: 22px; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+  body {
+    font-family: var(--font);
+    font-size: 16px;
+    color: var(--body);
+    background: var(--paper);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; color: var(--ink); text-wrap: balance; }
+  img { max-width: 100%; display: block; }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+  .on-dark a:focus-visible, .on-dark button:focus-visible { outline-color: var(--cream); }
+
+  /* ---------- Nav ---------- */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding-block: calc(13px + env(safe-area-inset-top, 0px)) 13px;
+    padding-left: var(--gl); padding-right: var(--gr);
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-name { color: var(--ink); font-weight: 700; font-size: 1.08rem; letter-spacing: 0.02em; text-decoration: none; white-space: nowrap; }
+  .nav-name span { color: var(--red); }
+  .nav-right { display: flex; align-items: center; gap: 22px; }
+  .nav-links { display: flex; gap: 24px; align-items: center; }
+  .nav-links a { color: var(--body); text-decoration: none; font-size: 0.93rem; }
+  .nav-links a:hover { color: var(--red); }
+  .nav-links a.nav-book { background: var(--red); color: var(--on-dark); padding: 8px 20px; border-radius: 999px; font-weight: 600; }
+  .nav-links a.nav-book:hover { background: var(--green); color: var(--on-dark); }
+  .lang-switch { display: flex; gap: 4px; padding: 4px; background: var(--tint); border-radius: 999px; border: 1px solid var(--line); }
+  .lang-switch button {
+    display: flex; align-items: center; gap: 7px;
+    border: none; background: transparent; cursor: pointer;
+    padding: 6px 12px; border-radius: 999px;
+    font-family: inherit; font-size: 0.85rem; font-weight: 600; color: var(--muted);
+  }
+  .lang-switch button.active { background: var(--paper); color: var(--ink); box-shadow: 0 2px 8px var(--shadow); }
+  .lang-switch svg { width: 21px; height: 14px; border-radius: 2.5px; display: block; }
+
+  /* ---------- Hero with video ---------- */
+  header {
+    background: var(--green); color: var(--on-dark);
+    padding-block: 108px 68px; padding-left: var(--gl); padding-right: var(--gr);
+    text-align: center;
+  }
+  .hero-inner { max-width: 940px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; }
+  .hero-kicker { color: var(--cream); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 14px; }
+  .hero-title { color: var(--on-dark); font-size: clamp(2.3rem, 5.4vw, 3.9rem); line-height: 1.08; margin-bottom: 16px; }
+  .hero-title .accent { color: var(--cream); }
+  .hero-sub { color: var(--on-dark-soft); font-size: clamp(1.02rem, 1.7vw, 1.18rem); max-width: 660px; }
+  .vsl { width: min(100%, 800px, max(520px, calc((100vh - 440px) * 1.7778))); margin-top: 30px; }
+  .vsl-frame {
+    position: relative; aspect-ratio: 16 / 9; max-width: 100%;
+    border-radius: 18px; overflow: hidden; background: var(--green-deep);
+    box-shadow: 0 30px 70px var(--shadow-strong); border: 1px solid rgba(255, 255, 255, 0.14);
+  }
+  .vsl-frame img, .vsl-frame video, .vsl-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border: 0; }
+  .vsl-play {
+    position: absolute; left: 7%; top: 50%; transform: translateY(-50%);
+    display: flex; align-items: center; gap: 16px; text-align: left;
+    background: none; border: none; cursor: pointer; color: var(--on-dark); font-family: inherit;
+  }
+  .vsl-play[disabled] { cursor: default; }
+  .vsl-play-ico {
+    width: 76px; height: 76px; border-radius: 50%; flex-shrink: 0;
+    background: var(--paper); display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 12px 30px var(--shadow-strong);
+  }
+  .vsl-play-ico svg { width: 28px; height: 28px; fill: var(--red); margin-left: 4px; }
+  .vsl-play:not([disabled]):hover .vsl-play-ico { transform: scale(1.06); }
+  .vsl-play-label { font-size: 1.05rem; font-weight: 700; line-height: 1.3; max-width: 240px; }
+  .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; margin-top: 28px; }
+  .btn { display: inline-block; text-decoration: none; border-radius: 999px; padding: 14px 32px; font-weight: 600; font-size: 1rem; }
+  .btn-light { background: var(--paper); color: var(--green); box-shadow: 0 8px 22px var(--shadow-strong); }
+  .btn-light:hover { background: var(--cream); }
+  .btn-outline { border: 1.5px solid var(--on-dark-faint); color: var(--on-dark); }
+  .btn-outline:hover { border-color: var(--on-dark); }
+  .hero-badges { display: flex; gap: 14px 34px; margin-top: 44px; flex-wrap: wrap; justify-content: center; text-align: left; }
+  .badge { border-left: 3px solid var(--cream); padding-left: 14px; }
+  .badge b { display: block; color: var(--on-dark); font-size: 1rem; }
+  .badge span { color: var(--on-dark-faint); font-size: 0.84rem; }
+
+  /* ---------- Sections ---------- */
+  section { padding-block: 88px; padding-left: var(--gl); padding-right: var(--gr); }
+  .inner { max-width: 1160px; margin: 0 auto; }
+  .kicker { color: var(--red); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; margin-bottom: 12px; }
+  .section-title { font-size: clamp(1.8rem, 3.8vw, 2.4rem); color: var(--green); margin-bottom: 28px; }
+  .section-lede { font-size: 1.04rem; max-width: 680px; margin: -10px 0 30px; }
+
+  .about-grid { display: grid; grid-template-columns: 330px minmax(0, 1fr); gap: 56px; align-items: start; }
+  .about-photo img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; border-radius: 18px; box-shadow: 0 20px 46px var(--shadow); }
+  .about-text { min-width: 0; }
+  .about-text p { margin-bottom: 18px; font-size: 1.04rem; max-width: 68ch; }
+  .cred-card { margin-top: 44px; background: var(--paper); border: 1px solid var(--line); border-top: 4px solid var(--red); border-radius: 16px; padding: 28px 32px; }
+  .cred-card h3 { color: var(--green); font-size: 0.95rem; margin-bottom: 10px; letter-spacing: 0.1em; text-transform: uppercase; }
+  .cred-card ul { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); column-gap: 40px; }
+  .cred-card li { padding: 11px 0 11px 20px; border-bottom: 1px solid var(--line); font-size: 0.95rem; position: relative; min-width: 0; }
+  .cred-card li::before { content: ""; position: absolute; left: 2px; top: 1.25em; width: 7px; height: 7px; border-radius: 50%; background: var(--red); }
+
+  .conditions { background: var(--tint); }
+  .cond-grid { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
+  .cond-grid li { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; display: flex; gap: 12px; align-items: center; font-weight: 600; color: var(--ink); font-size: 0.98rem; min-width: 0; }
+  .cond-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; background: var(--red); }
+  .urgent { margin-top: 26px; display: flex; gap: 12px; align-items: flex-start; background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--red); border-radius: 10px; padding: 14px 18px; font-size: 0.93rem; color: var(--ink); max-width: 860px; }
+  .urgent svg { width: 20px; height: 20px; flex-shrink: 0; margin-top: 2px; stroke: var(--red); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+  .svc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; }
+  .svc { background: var(--paper); border-radius: 16px; padding: 30px 26px; border: 1px solid var(--line); min-width: 0; }
+  .svc-icon { width: 46px; height: 46px; border-radius: 12px; background: var(--green); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+  .svc-icon svg { width: 24px; height: 24px; stroke: var(--on-dark); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .svc h3 { color: var(--green); font-size: 1.12rem; margin-bottom: 10px; }
+  .svc p { font-size: 0.94rem; }
+  .visit-title { margin-top: 56px; margin-bottom: 20px; font-size: 1.3rem; color: var(--green); }
+  .visit-steps { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
+  .visit-steps li { display: flex; gap: 16px; align-items: flex-start; min-width: 0; }
+  .step-n { width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0; border: 2px solid var(--red); color: var(--red); font-weight: 700; display: flex; align-items: center; justify-content: center; }
+  .visit-steps b { display: block; color: var(--ink); margin-bottom: 4px; }
+  .visit-steps p { font-size: 0.94rem; }
+
+  .contact { background: var(--green); color: var(--on-dark); }
+  .contact-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: center; }
+  .contact .kicker { color: var(--cream); }
+  .contact .section-title { color: var(--on-dark); }
+  .contact p.lede { color: var(--on-dark-soft); font-size: 1.04rem; margin-bottom: 30px; max-width: 520px; }
+  .contact-actions { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; }
+  .text-link-light { color: var(--on-dark); font-weight: 600; text-decoration: none; border-bottom: 2px solid var(--cream); padding-bottom: 2px; }
+  .contact-card { background: var(--paper); border-radius: 16px; padding: 26px 32px; box-shadow: 0 20px 50px var(--shadow-strong); min-width: 0; }
+  .contact-row { display: flex; gap: 16px; align-items: flex-start; padding: 13px 0; border-bottom: 1px solid var(--line); }
+  .contact-row:last-child { border-bottom: none; }
+  .contact-ico { width: 38px; height: 38px; border-radius: 50%; flex-shrink: 0; background: var(--green); display: flex; align-items: center; justify-content: center; }
+  .contact-ico svg { width: 18px; height: 18px; stroke: var(--on-dark); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .contact-row b { display: block; font-size: 0.76rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+  .contact-row a, .contact-row span { color: var(--ink); text-decoration: none; font-weight: 500; overflow-wrap: anywhere; }
+  .contact-row a:hover { color: var(--red); }
+
+  footer { background: var(--green-deep); color: var(--on-dark-soft); text-align: center; padding-block: 30px calc(26px + env(safe-area-inset-bottom, 0px)); padding-left: var(--gl); padding-right: var(--gr); font-size: 0.86rem; }
+  footer .foot-note { color: var(--on-dark-faint); font-size: 0.78rem; margin: 8px auto 0; max-width: 640px; }
+  footer .foot-gmc { color: var(--on-dark-faint); font-size: 0.72rem; margin-top: 10px; letter-spacing: 0.06em; }
+
+  /* ---------- Editing ---------- */
+  .is-empty { display: none; }
+  body.editing .is-empty { display: block; min-height: 1.3em; min-width: 90px; outline: 1px dashed var(--edit); }
+  body.has-editbar { padding-bottom: 76px; }
+  body.editing .ed { cursor: text; outline: 1px dashed transparent; outline-offset: 3px; }
+  body.editing .ed:hover { outline-color: var(--edit); }
+  body.editing .ed:focus { outline: 2px solid var(--edit); background: var(--edit-wash); }
+  #editBar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 250;
+    display: flex; align-items: center; gap: 10px 18px; flex-wrap: wrap;
+    padding-block: 10px calc(10px + env(safe-area-inset-bottom, 0px));
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+    background: var(--ink); color: var(--on-dark); font-size: 0.86rem; text-align: left;
+    box-shadow: 0 -8px 26px var(--shadow-strong);
+  }
+  .eb-msg { display: flex; flex-direction: column; line-height: 1.3; min-width: 0; }
+  .eb-msg b { font-size: 0.92rem; }
+  .eb-msg span { color: var(--on-dark-faint); font-size: 0.78rem; }
+  .eb-status { color: var(--cream); font-size: 0.8rem; flex: 1; min-width: 120px; }
+  .eb-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+  #editBar button {
+    border: 1px solid var(--on-dark-faint); background: transparent; color: var(--on-dark);
+    border-radius: 999px; padding: 8px 14px; font-family: inherit; font-size: 0.82rem; font-weight: 600; cursor: pointer;
+  }
+  #editBar button:disabled { opacity: 0.45; cursor: default; }
+  #editBar button.eb-primary { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+  #editorPanel {
+    position: fixed; top: 0; right: -480px; width: 440px; max-width: 92vw; height: 100%;
+    background: var(--paper); z-index: 300; box-shadow: -12px 0 44px var(--shadow-strong);
+    transition: right .3s ease; display: flex; flex-direction: column; font-size: 0.88rem; visibility: hidden; text-align: left;
+  }
+  #editorPanel.open { right: 0; visibility: visible; }
+  .ep-head { padding: calc(14px + env(safe-area-inset-top, 0px)) 20px 14px; background: var(--ink); color: var(--on-dark); display: flex; align-items: center; justify-content: space-between; }
+  .ep-head b { font-size: 1rem; }
+  .ep-head button { background: none; border: none; color: var(--on-dark); font-size: 1.3rem; cursor: pointer; }
+  .ep-body { flex: 1; overflow-y: auto; padding: 14px 20px 26px; }
+  .ep-group { margin-bottom: 6px; }
+  .ep-group > summary { cursor: pointer; font-weight: 700; color: var(--green); padding: 10px 0; border-bottom: 2px solid var(--line); font-size: 0.94rem; }
+  .ep-field { padding: 10px 0 6px; }
+  .ep-field label { display: block; font-weight: 600; color: var(--muted); margin-bottom: 4px; font-size: 0.74rem; letter-spacing: 0.04em; }
+  .ep-field textarea, .ep-config input[type="text"], .ep-copybox { width: 100%; border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; font-family: inherit; font-size: 0.9rem; color: var(--ink); background: var(--tint); }
+  .ep-field textarea { resize: vertical; min-height: 36px; }
+  .ep-config label { display: flex; align-items: center; gap: 8px; font-weight: 600; color: var(--ink); padding: 8px 0; font-size: 0.85rem; }
+  .ep-config label.block { display: block; }
+  .ep-config input[type="text"] { margin-top: 4px; }
+  .ep-foot { padding: 12px 20px calc(86px + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--line); background: var(--tint); }
+  .ep-note { font-size: 0.78rem; color: var(--muted); }
+  .ep-copybox { min-height: 110px; margin-top: 8px; }
+
+  @media (max-width: 920px) {
+    .nav-links { display: none; }
+    .about-grid, .contact-inner { grid-template-columns: 1fr; gap: 36px; }
+    .about-photo { max-width: 300px; }
+    header { padding-block: 108px 60px; }
+    section { padding-block: 62px; }
+    .vsl-play-ico { width: 58px; height: 58px; }
+    .vsl-play-ico svg { width: 22px; height: 22px; }
+    .vsl-play-label { font-size: 0.92rem; max-width: 150px; }
+    .vsl-play { gap: 12px; left: 5%; }
+  }
+  @media (max-width: 420px) {
+    .lang-switch button { padding: 6px 9px; }
+    .btn { padding: 13px 26px; }
+    .cred-card { padding: 22px 20px; }
+    .contact-card { padding: 20px 20px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+  }
 </style>
+<!--STYLE_END-->
 </head>
 <body>
-  <main>
-    <div class="k">Consultant Cardiologist · London</div>
-    <h1>Dr Sam Liu</h1>
-    <p>New website coming soon.</p>
-    <p lang="zh-CN">网站即将上线。</p>
-    <div class="rule"></div>
-    <p>To book an appointment, please contact <a href="https://www.mediihealth.com/en/find-care">MEDii</a> or call <a href="tel:+443335773800">0333 577 3800</a>.</p>
-    <p class="small" lang="zh-CN">预约就诊请联系 MEDii，或致电 0333 577 3800。</p>
-  </main>
+<!--BODY_START-->
+<!--CONTENT_JSON_START-->
+<script id="content-data" type="application/json">
+{
+ "config": {
+  "bookingUrl": "https://www.mediihealth.com/en/find-care",
+  "profileUrl": "https://www.mediihealth.com/en/team/simiao-liu",
+  "photoUrl": "dr-sam-liu.jpg",
+  "posterUrl": "video-poster.jpg",
+  "videoUrlEn": "",
+  "videoUrlZh": "",
+  "videoPlaceholder": false,
+  "languages": [
+   "zh"
+  ]
+ },
+ "zh": {
+  "nav_about": "关于",
+  "nav_services": "服务",
+  "nav_conditions": "常见病症",
+  "nav_contact": "联系",
+  "nav_book": "预约",
+  "hero_kicker": "心内科主任级医师 · 英国伦敦",
+  "hero_title": "您的英国心脏专科顾问",
+  "hero_sub": "毕业于伦敦UCL医学院，并曾于欧洲最大的心脏中心之一接受专业培训。凭借逾万次心脏专科诊疗经验，全心守护您的心脏健康。",
+  "cta_book": "预约就诊",
+  "cta_more": "了解更多",
+  "badge1_t": "内外全科医学MBBS · 英国皇家内科医师学会会员 MRCP（伦敦）",
+  "badge1_s": "",
+  "badge2_t": "心脏及大内科双专科主任级医师",
+  "badge2_s": "",
+  "badge3_t": "",
+  "badge3_s": "",
+  "photo_alt": "伦敦心内科主任级医生 - （Dr Sam Liu）",
+  "video_cta": "观看：你在英国的心脏专家",
+  "video_placeholder": "自我介绍视频",
+  "about_kicker": "",
+  "about_title": "有些心脏不适并不是严重心脏病，而是一道需要一起弄清楚的难题。我的工作，就是帮您把这道题解开。",
+  "about_p1": "我毕业于英国伦敦大学学院（UCL）医学院，之后在伦敦多家教学医院接受了十余年的临床培训，并在欧洲最大的心脏中心之一——Barts Heart Centre 完成心脏专科培训，专攻心力衰竭、心脏瓣膜病及心脏影像等亚专业方向。",
+  "about_p2": "目前我在英国 NHS 担任心脏科主任级医师，同时在伦敦市中心的脉德医疗接诊私人患者，担任医疗总监，为许多国际及华语患者服务。",
+  "about_p3": "我注重整体评估和清楚解释。心脏问题常常和高血压、糖尿病、血脂异常、甲状腺，甚至心理问题等同时存在，我会结合全身情况判断，而不是只盯着心脏一个器官；需要做什么检查就安排什么，不做不必要的检查。看诊时详细问诊、亲自检查，最后给您清楚的解释和明确的治疗方案——担心心脏已经让人焦虑，看诊不应该再匆忙。",
+  "cred_title": "资历",
+  "cred_1": "心脏科及大内科主任级医师",
+  "cred_2": "脉德医疗医疗总监",
+  "cred_3": "NHS 公立医疗任职医院：皇家自由医院组 - 北米德尔塞克斯大学医院 心脏内科主任级医师及临床质量与安全总负责人",
+  "cred_4": "伦敦大学学院（UCL）临床医学院毕业",
+  "cred_5": "英国皇家内科医师学会会员 MRCP（伦敦）",
+  "cred_6": "前巴茨心脏中心名誉主任医师",
+  "svc_kicker": "服务",
+  "svc_title": "心脏科服务",
+  "svc1_t": "心脏科门诊",
+  "svc1_p": "胸痛、心悸、气短、头晕或晕厥、高血压和高胆固醇：仔细评估，清晰解释。",
+  "svc2_t": "院内心脏检查",
+  "svc2_p": "心电图、心脏超声、Holter 动态心电监测和 24 小时动态血压监测均可在 MEDii 完成，通常当天即可进行，结果由我亲自审阅并为您解读。",
+  "svc3_t": "普通内科",
+  "svc3_p": "超越心脏的照护。作为心脏及大内科双专科主任级医师，我会把不明原因的症状和并存疾病作为整体来评估，而非各自为政。",
+  "svc4_t": "双语及国际医疗",
+  "svc4_p": "中英文诊疗，报告和信件可提供双语版本，并协助您衔接英国与海外的医疗服务。",
+  "visit_title": "就诊流程",
+  "visit1_t": "初诊",
+  "visit1_p": "我们会详细了解您的症状、病史和风险因素，并为您做体格检查。无需 GP 转诊。",
+  "visit2_t": "院内心脏检查",
+  "visit2_p": "所需的检查，如心电图、心脏超声或动态心电监测，均可在 MEDii 安排，通常当天即可完成。",
+  "visit3_t": "结果解读",
+  "visit3_p": "每一项结果都由我亲自审阅，并在复诊时为您讲清楚结果的含义和下一步方案，同时提供书面计划。",
+  "cond_kicker": "常见病症",
+  "cond_title": "我诊治的心脏症状与疾病",
+  "cond_lede": "大多数患者是带着症状而不是诊断来就诊的。以下是患者预约心脏科门诊最常见的原因。",
+  "cond_1": "胸痛或胸闷",
+  "cond_2": "心悸与心律不齐",
+  "cond_3": "活动后气短",
+  "cond_4": "头晕、晕厥或黑矇",
+  "cond_5": "高血压",
+  "cond_6": "高胆固醇与心血管风险评估",
+  "cond_7": "心脏病家族史",
+  "cond_8": "手术前心脏评估",
+  "cond_urgent": "突发或剧烈的胸痛，尤其伴有出汗、恶心或气短时，可能是心脏病发作。请立即拨打 999，不要等待预约。",
+  "ct_kicker": "联系",
+  "ct_title": "预约就诊",
+  "ct_lede": "就诊预约通过 MEDii 进行。MEDii 位于伦敦市中心，距 Euston 和 King's Cross St Pancras 车站步行仅数分钟。无需 GP 转诊，通常可安排当天或次日就诊。",
+  "ct_btn": "通过 MEDii 预约",
+  "ct_profile": "查看我在 MEDii 的介绍",
+  "ct_phone": "电话",
+  "ct_email": "邮箱",
+  "ct_addr": "诊所",
+  "ct_addr_v": "MEDii, 18 Duke's Road, London WC1H 9PY",
+  "ct_web": "医院官网",
+  "foot": "© 2026 刘医生 Dr Sam Liu · 心内科主任级医师 · 英国伦敦",
+  "foot_note": "本网站仅提供一般信息，不能替代医疗建议。紧急情况请拨打 999。",
+  "foot_gmc": "GMC 7169774"
+ }
+}
+</script>
+<!--CONTENT_JSON_END-->
+
+<nav aria-label="Main">
+  <a class="nav-name" href="#top">Dr Sam <span>Liu</span></a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="#about" data-i18n="nav_about">关于</a>
+      <a href="#conditions" data-i18n="nav_conditions">常见病症</a>
+      <a href="#services" data-i18n="nav_services">服务</a>
+      <a href="#contact" data-i18n="nav_contact">联系</a>
+      <a class="nav-book" data-booking href="https://www.mediihealth.com/en/find-care" target="_blank" rel="noopener" data-i18n="nav_book">预约</a>
+    </div>
+    <div class="lang-switch" role="group" aria-label="Language / 语言">
+      <button id="btnEn" type="button" onclick="setLang('en')" class="active" aria-label="English" aria-pressed="true">
+        <svg viewBox="0 0 60 30" aria-hidden="true"><clipPath id="ukc"><rect width="60" height="30"/></clipPath><g clip-path="url(#ukc)"><rect width="60" height="30" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#FFFFFF" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="3"/><path d="M30,0 V30 M0,15 H60" stroke="#FFFFFF" stroke-width="10"/><path d="M30,0 V30 M0,15 H60" stroke="#C8102E" stroke-width="6"/></g></svg>
+        EN
+      </button>
+      <button id="btnZh" type="button" onclick="setLang('zh')" aria-label="中文" aria-pressed="false">
+        <svg viewBox="0 0 30 20" aria-hidden="true"><rect width="30" height="20" fill="#EE1C25"/><g fill="#FFDE00"><path d="M0,-1L0.588,0.809L-0.951,-0.309L0.951,-0.309L-0.588,0.809Z" transform="translate(5,5) scale(3)"/><path d="M0,-1L0.588,0.809L-0.951,-0.309L0.951,-0.309L-0.588,0.809Z" transform="translate(10,2)"/><path d="M0,-1L0.588,0.809L-0.951,-0.309L0.951,-0.309L-0.588,0.809Z" transform="translate(12,4.5)"/><path d="M0,-1L0.588,0.809L-0.951,-0.309L0.951,-0.309L-0.588,0.809Z" transform="translate(12,7.5)"/><path d="M0,-1L0.588,0.809L-0.951,-0.309L0.951,-0.309L-0.588,0.809Z" transform="translate(10,10)"/></g></svg>
+        中文
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header id="top" class="on-dark">
+  <div class="hero-inner">
+    <div class="hero-kicker" data-i18n="hero_kicker">心内科主任级医师 · 英国伦敦</div>
+    <h1 class="hero-title" data-i18n-html="hero_title">您的英国心脏专科顾问</h1>
+    <p class="hero-sub" data-i18n="hero_sub">毕业于伦敦UCL医学院，并曾于欧洲最大的心脏中心之一接受专业培训。凭借逾万次心脏专科诊疗经验，全心守护您的心脏健康。</p>
+    <div class="vsl">
+      <div class="vsl-frame" id="vslFrame">
+        <img id="vslPoster" src="video-poster.jpg" alt="伦敦心内科主任级医生 - （Dr Sam Liu）" width="1280" height="720" fetchpriority="high">
+        <button type="button" class="vsl-play" id="vslPlay" onclick="playVideo()">
+          <span class="vsl-play-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span>
+          <span class="vsl-play-label" id="vslLabel">观看：你在英国的心脏专家</span>
+        </button>
+      </div>
+    </div>
+    <div class="hero-ctas">
+      <a class="btn btn-light" data-booking href="https://www.mediihealth.com/en/find-care" target="_blank" rel="noopener" data-i18n="cta_book">预约就诊</a>
+      <a class="btn btn-outline" href="#about" data-i18n="cta_more">了解更多</a>
+    </div>
+    <div class="hero-badges">
+      <div class="badge"><b data-i18n="badge1_t">内外全科医学MBBS · 英国皇家内科医师学会会员 MRCP（伦敦）</b><span data-i18n="badge1_s"></span></div>
+      <div class="badge"><b data-i18n="badge2_t">心脏及大内科双专科主任级医师</b><span data-i18n="badge2_s"></span></div>
+      <div class="badge"><b data-i18n="badge3_t"></b><span data-i18n="badge3_s"></span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="about">
+  <div class="inner">
+    <div class="kicker" data-i18n="about_kicker"></div>
+    <h2 class="section-title" data-i18n="about_title">有些心脏不适并不是严重心脏病，而是一道需要一起弄清楚的难题。我的工作，就是帮您把这道题解开。</h2>
+    <div class="about-grid" id="aboutGrid">
+      <div class="about-photo"><img id="aboutPhoto" src="dr-sam-liu.jpg" alt="伦敦心内科主任级医生 - （Dr Sam Liu）" width="960" height="1198" loading="lazy"></div>
+      <div class="about-text">
+        <p data-i18n="about_p1">我毕业于英国伦敦大学学院（UCL）医学院，之后在伦敦多家教学医院接受了十余年的临床培训，并在欧洲最大的心脏中心之一——Barts Heart Centre 完成心脏专科培训，专攻心力衰竭、心脏瓣膜病及心脏影像等亚专业方向。</p>
+        <p data-i18n="about_p2">目前我在英国 NHS 担任心脏科主任级医师，同时在伦敦市中心的脉德医疗接诊私人患者，担任医疗总监，为许多国际及华语患者服务。</p>
+        <p data-i18n="about_p3">我注重整体评估和清楚解释。心脏问题常常和高血压、糖尿病、血脂异常、甲状腺，甚至心理问题等同时存在，我会结合全身情况判断，而不是只盯着心脏一个器官；需要做什么检查就安排什么，不做不必要的检查。看诊时详细问诊、亲自检查，最后给您清楚的解释和明确的治疗方案——担心心脏已经让人焦虑，看诊不应该再匆忙。</p>
+      </div>
+    </div>
+    <div class="cred-card">
+      <h3 data-i18n="cred_title">资历</h3>
+      <ul>
+        <li data-i18n="cred_1">心脏科及大内科主任级医师</li>
+        <li data-i18n="cred_2">脉德医疗医疗总监</li>
+        <li data-i18n="cred_3">NHS 公立医疗任职医院：皇家自由医院组 - 北米德尔塞克斯大学医院 心脏内科主任级医师及临床质量与安全总负责人</li>
+        <li data-i18n="cred_4">伦敦大学学院（UCL）临床医学院毕业</li>
+        <li data-i18n="cred_5">英国皇家内科医师学会会员 MRCP（伦敦）</li>
+        <li data-i18n="cred_6">前巴茨心脏中心名誉主任医师</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="conditions" id="conditions">
+  <div class="inner">
+    <div class="kicker" data-i18n="cond_kicker">常见病症</div>
+    <h2 class="section-title" data-i18n="cond_title">我诊治的心脏症状与疾病</h2>
+    <p class="section-lede" data-i18n="cond_lede">大多数患者是带着症状而不是诊断来就诊的。以下是患者预约心脏科门诊最常见的原因。</p>
+    <ul class="cond-grid">
+      <li><span class="cond-dot" aria-hidden="true"></span><span data-i18n="cond_1">胸痛或胸闷</span></li>
+      <li><span class="cond-dot" aria-hidden="true"></span><span data-i18n="cond_2">心悸与心律不齐</span></li>
+      <li><span class="cond-dot" aria-hidden="true"></span><span data-i18n="cond_3">活动后气短</span></li>
+      <li><span class="cond-dot" aria-hidden="true"></span><span data-i18n="cond_4">头晕、晕厥或黑矇</span></li>
+      <li><span class="cond-dot" aria-hidden="true"></span><span data-i18n="cond_5">高血压</span></li>
+      <li><span class="cond-dot" aria-hidden="true"></span><span data-i18n="cond_6">高胆固醇与心血管风险评估</span></li>
+      <li><span class="cond-dot" aria-hidden="true"></span><span data-i18n="cond_7">心脏病家族史</span></li>
+      <li><span class="cond-dot" aria-hidden="true"></span><span data-i18n="cond_8">手术前心脏评估</span></li>
+    </ul>
+    <p class="urgent" role="note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l10 18H2L12 3z"/><path d="M12 10v5M12 18v.5"/></svg><span data-i18n="cond_urgent">突发或剧烈的胸痛，尤其伴有出汗、恶心或气短时，可能是心脏病发作。请立即拨打 999，不要等待预约。</span></p>
+  </div>
+</section>
+
+<section id="services">
+  <div class="inner">
+    <div class="kicker" data-i18n="svc_kicker">服务</div>
+    <h2 class="section-title" data-i18n="svc_title">心脏科服务</h2>
+    <div class="svc-grid">
+      <div class="svc">
+        <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-9.5A4 4 0 0 1 12 8a4 4 0 0 1 7 2.5C19 15.6 12 20 12 20z"/></svg></div>
+        <h3 data-i18n="svc1_t">心脏科门诊</h3>
+        <p data-i18n="svc1_p">胸痛、心悸、气短、头晕或晕厥、高血压和高胆固醇：仔细评估，清晰解释。</p>
+      </div>
+      <div class="svc">
+        <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg></div>
+        <h3 data-i18n="svc2_t">院内心脏检查</h3>
+        <p data-i18n="svc2_p">心电图、心脏超声、Holter 动态心电监测和 24 小时动态血压监测均可在 MEDii 完成，通常当天即可进行，结果由我亲自审阅并为您解读。</p>
+      </div>
+      <div class="svc">
+        <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <h3 data-i18n="svc3_t">普通内科</h3>
+        <p data-i18n="svc3_p">超越心脏的照护。作为心脏及大内科双专科主任级医师，我会把不明原因的症状和并存疾病作为整体来评估，而非各自为政。</p>
+      </div>
+      <div class="svc">
+        <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18"/></svg></div>
+        <h3 data-i18n="svc4_t">双语及国际医疗</h3>
+        <p data-i18n="svc4_p">中英文诊疗，报告和信件可提供双语版本，并协助您衔接英国与海外的医疗服务。</p>
+      </div>
+    </div>
+    <h3 class="visit-title" data-i18n="visit_title">就诊流程</h3>
+    <ol class="visit-steps">
+      <li><span class="step-n" aria-hidden="true">1</span><div><b data-i18n="visit1_t">初诊</b><p data-i18n="visit1_p">我们会详细了解您的症状、病史和风险因素，并为您做体格检查。无需 GP 转诊。</p></div></li>
+      <li><span class="step-n" aria-hidden="true">2</span><div><b data-i18n="visit2_t">院内心脏检查</b><p data-i18n="visit2_p">所需的检查，如心电图、心脏超声或动态心电监测，均可在 MEDii 安排，通常当天即可完成。</p></div></li>
+      <li><span class="step-n" aria-hidden="true">3</span><div><b data-i18n="visit3_t">结果解读</b><p data-i18n="visit3_p">每一项结果都由我亲自审阅，并在复诊时为您讲清楚结果的含义和下一步方案，同时提供书面计划。</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="contact on-dark" id="contact">
+  <div class="contact-inner">
+    <div>
+      <div class="kicker" data-i18n="ct_kicker">联系</div>
+      <h2 class="section-title" data-i18n="ct_title">预约就诊</h2>
+      <p class="lede" data-i18n="ct_lede">就诊预约通过 MEDii 进行。MEDii 位于伦敦市中心，距 Euston 和 King's Cross St Pancras 车站步行仅数分钟。无需 GP 转诊，通常可安排当天或次日就诊。</p>
+      <div class="contact-actions">
+        <a class="btn btn-light" data-booking href="https://www.mediihealth.com/en/find-care" target="_blank" rel="noopener" data-i18n="ct_btn">通过 MEDii 预约</a>
+        <a class="text-link-light" id="profileLink" href="https://www.mediihealth.com/en/team/simiao-liu" target="_blank" rel="noopener" data-i18n="ct_profile">查看我在 MEDii 的介绍</a>
+      </div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-row">
+        <div class="contact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></div>
+        <div><b data-i18n="ct_phone">电话</b><a href="tel:+443335773800">0333 577 3800</a></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+        <div><b data-i18n="ct_email">邮箱</b><a href="mailto:info@mediihealth.com">info@mediihealth.com</a></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg></div>
+        <div><b data-i18n="ct_addr">诊所</b><span data-i18n="ct_addr_v">MEDii, 18 Duke's Road, London WC1H 9PY</span></div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18"/></svg></div>
+        <div><b data-i18n="ct_web">医院官网</b><a href="https://www.mediihealth.com" target="_blank" rel="noopener">www.mediihealth.com</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div data-i18n="foot">© 2026 刘医生 Dr Sam Liu · 心内科主任级医师 · 英国伦敦</div>
+  <div class="foot-note" data-i18n="foot_note">本网站仅提供一般信息，不能替代医疗建议。紧急情况请拨打 999。</div>
+  <div class="foot-gmc" data-i18n="foot_gmc">GMC 7169774</div>
+</footer>
+
+<div id="editBar" hidden>
+  <span class="eb-msg"><b id="ebLang">Editing the English site</b><span id="ebHint">Click any text on the page and type.</span></span>
+  <span class="eb-status" id="ebStatus" role="status"></span>
+  <span class="eb-actions">
+    <button type="button" id="ebToggle" onclick="toggleInline()">Editing: on</button>
+    <button type="button" id="ebList" onclick="toggleEditor()">List view</button>
+    <button type="button" id="ebUndo" onclick="undoLanguage()">Undo my edits</button>
+    <button type="button" id="ebPrimary" class="eb-primary" onclick="primaryAction()">Download site file</button>
+  </span>
+</div>
+<div id="editorPanel" aria-label="All text">
+  <div class="ep-head">
+    <b id="epTitle">All text · English</b>
+    <button type="button" onclick="toggleEditor()" aria-label="Close">✕</button>
+  </div>
+  <div class="ep-body" id="epBody"></div>
+  <div class="ep-foot">
+    <div class="ep-note" id="epNote">This list shows one language at a time. Use the flag switch at the top of the page to change language.</div>
+    <textarea class="ep-copybox" id="epCopyBox" hidden readonly aria-label="Your changes"></textarea>
+  </div>
+</div>
+
+<script>
+const MOCK = !!window.SITE_MOCK;
+/* pristine source snapshot, captured before any script changes the page */
+const PRISTINE = "<!" + "DOCTYPE html>\n" + document.documentElement.outerHTML;
+
+const DEFAULTS = JSON.parse(document.getElementById("content-data").textContent);
+const LANGS = (DEFAULTS.config.languages || ["en", "zh"]).filter(l => DEFAULTS[l]);
+const SECTIONS = LANGS.concat(["config"]);
+function blank() { const o = {}; SECTIONS.forEach(s => { o[s] = {}; }); return o; }
+let EDITS = blank();   /* only what differs from the published wording */
+let CONTENT = null;
+const EDITS_KEY = "drsamliu_edits_v6";
+const OLD_DRAFT_KEY = "drsamliu_content_draft_v5";
+const LANG_KEY = "drsamliu_lang";
+let editMode = MOCK || location.hash === "#edit";
+let localDirty = false;
+
+function store(action, key, value) {
+  try {
+    if (action === "get") return localStorage.getItem(key);
+    if (action === "set") localStorage.setItem(key, value);
+    if (action === "del") localStorage.removeItem(key);
+  } catch (e) { /* storage unavailable */ }
+  return null;
+}
+function prune(e) {
+  const out = blank();
+  SECTIONS.forEach(s => {
+    const src = (e && e[s]) || {};
+    Object.keys(src).forEach(k => {
+      if (Object.prototype.hasOwnProperty.call(DEFAULTS[s], k) && src[k] !== DEFAULTS[s][k]) out[s][k] = src[k];
+    });
+  });
+  return out;
+}
+function rebuild() {
+  CONTENT = {};
+  SECTIONS.forEach(s => { CONTENT[s] = Object.assign({}, DEFAULTS[s], EDITS[s]); });
+}
+function countEdits() { return SECTIONS.reduce((n, s) => n + Object.keys(EDITS[s]).length, 0); }
+function saveLocal() { store("set", EDITS_KEY, JSON.stringify({ edits: EDITS, dirty: localDirty })); }
+function loadLocal() {
+  try {
+    const cur = JSON.parse(store("get", EDITS_KEY) || "null");
+    if (cur && cur.edits) { EDITS = prune(cur.edits); localDirty = !!cur.dirty; return; }
+    /* one-off: carry over edits made in the first preview, which saved the whole text */
+    const old = JSON.parse(store("get", OLD_DRAFT_KEY) || "null");
+    const baseEl = document.getElementById("baseline-v1");
+    if (old && old.en && old.zh && baseEl) {
+      const base = JSON.parse(baseEl.textContent);
+      const diff = blank();
+      SECTIONS.forEach(s => {
+        Object.keys(old[s] || {}).forEach(k => { if (base[s] && old[s][k] !== base[s][k]) diff[s][k] = old[s][k]; });
+      });
+      EDITS = prune(diff);
+      localDirty = countEdits() > 0;
+      saveLocal();
+    }
+  } catch (e) {}
+}
+/* edits only ever apply for the owner in edit mode, never for ordinary visitors */
+if (editMode) loadLocal();
+rebuild();
+
+let lang = "en";
+const savedLang = store("get", LANG_KEY);
+const urlLang = new URLSearchParams(location.search).get("lang");
+if (urlLang === "zh" || urlLang === "en") lang = urlLang;
+else if (savedLang === "zh" || savedLang === "en") lang = savedLang;
+else if (!MOCK && (navigator.language || "").toLowerCase().startsWith("zh")) lang = "zh";
+if (LANGS.indexOf(lang) === -1) lang = LANGS[0];
+document.querySelector(".lang-switch").hidden = LANGS.length < 2;
+
+function render() {
+  const dict = CONTENT[lang] || {};
+  const cfg = CONTENT.config || {};
+  const active = document.activeElement;
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    if (el === active && el.isContentEditable) return;
+    const v = dict[el.dataset.i18n];
+    if (v !== undefined && el.textContent !== v) el.textContent = v;
+  });
+  document.querySelectorAll("[data-i18n-html]").forEach(el => {
+    if (el === active && el.isContentEditable) return;
+    const v = dict[el.dataset.i18nHtml];
+    if (v !== undefined && el.innerHTML !== v) el.innerHTML = v;
+  });
+  document.querySelectorAll("[data-i18n], [data-i18n-html]").forEach(el => {
+    if (el.closest("#editBar, #editorPanel")) return;
+    el.classList.toggle("is-empty", !(el.textContent || "").trim());
+  });
+  document.querySelectorAll(".badge").forEach(b => b.classList.toggle("is-empty", !b.textContent.trim()));
+  document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+  const en = document.getElementById("btnEn"), zh = document.getElementById("btnZh");
+  en.classList.toggle("active", lang === "en"); en.setAttribute("aria-pressed", lang === "en");
+  zh.classList.toggle("active", lang === "zh"); zh.setAttribute("aria-pressed", lang === "zh");
+  document.querySelectorAll("[data-booking]").forEach(a => { if (cfg.bookingUrl) a.href = cfg.bookingUrl; });
+  if (cfg.profileUrl) document.getElementById("profileLink").href = cfg.profileUrl;
+  const photo = document.getElementById("aboutPhoto");
+  photo.parentElement.hidden = !cfg.photoUrl;
+  document.getElementById("aboutGrid").style.gridTemplateColumns = cfg.photoUrl ? "" : "1fr";
+  if (cfg.photoUrl && photo.getAttribute("src") !== cfg.photoUrl) photo.src = cfg.photoUrl;
+  photo.alt = dict.photo_alt || "";
+  renderVideo();
+  if (editMode) renderBar();
+}
+
+function setLang(l) {
+  if (LANGS.indexOf(l) === -1) return;
+  if (document.activeElement && document.activeElement.blur) document.activeElement.blur();
+  lang = l; store("set", LANG_KEY, l); render();
+  if (document.getElementById("editorPanel").classList.contains("open")) buildEditor();
+}
+
+/* ---------- front-page video ---------- */
+let playingUrl = null;
+function currentVideoUrl() {
+  const cfg = CONTENT.config || {};
+  return lang === "zh" ? (cfg.videoUrlZh || cfg.videoUrlEn || "") : (cfg.videoUrlEn || cfg.videoUrlZh || "");
+}
+function renderVideo() {
+  const cfg = CONTENT.config || {}, dict = CONTENT[lang] || {};
+  const url = currentVideoUrl();
+  const frame = document.getElementById("vslFrame");
+  const poster = document.getElementById("vslPoster");
+  const btn = document.getElementById("vslPlay");
+  if (cfg.posterUrl && poster.getAttribute("src") !== cfg.posterUrl) poster.src = cfg.posterUrl;
+  poster.alt = dict.photo_alt || "";
+  if (playingUrl && playingUrl !== url) {
+    frame.querySelectorAll("video, iframe").forEach(n => n.remove());
+    playingUrl = null;
+  }
+  poster.hidden = !!playingUrl;
+  btn.hidden = !!playingUrl || !(url || cfg.videoPlaceholder);
+  btn.disabled = !url;
+  document.getElementById("vslLabel").textContent = url ? (dict.video_cta || "") : (dict.video_placeholder || "");
+}
+function embedUrl(url) {
+  let m = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([\w-]{6,})/);
+  if (m) return "https://www.youtube-nocookie.com/embed/" + m[1] + "?autoplay=1&rel=0";
+  m = url.match(/vimeo\.com\/(?:video\/)?(\d+)/);
+  if (m) return "https://player.vimeo.com/video/" + m[1] + "?autoplay=1";
+  return null;
+}
+function playVideo() {
+  const url = currentVideoUrl();
+  if (!url) return;
+  const frame = document.getElementById("vslFrame");
+  const emb = embedUrl(url);
+  let node;
+  if (emb) {
+    node = document.createElement("iframe");
+    node.src = emb; node.title = "Video";
+    node.setAttribute("allow", "autoplay; fullscreen; picture-in-picture");
+    node.setAttribute("allowfullscreen", "");
+  } else {
+    node = document.createElement("video");
+    node.src = url; node.controls = true; node.autoplay = true;
+    node.setAttribute("playsinline", "");
+  }
+  frame.appendChild(node);
+  playingUrl = url;
+  renderVideo();
+}
+
+/* ---------- editing: type straight onto the page ---------- */
+const HTML_KEYS = new Set(["hero_title"]);
+let inlineOn = false;
+function keyOf(el) { return el.dataset.i18n || el.dataset.i18nHtml; }
+function setEdit(section, key, value) {
+  if (value === DEFAULTS[section][key]) delete EDITS[section][key]; else EDITS[section][key] = value;
+  rebuild();
+  localDirty = true; saveLocal();
+  scheduleSync();
+  renderBar();
+}
+function setInline(on) {
+  inlineOn = on;
+  document.querySelectorAll("[data-i18n], [data-i18n-html]").forEach(el => {
+    if (el.closest("#editorPanel, #editBar")) return;
+    if (on) {
+      if (el.dataset.i18nHtml) el.contentEditable = "true";
+      else { try { el.contentEditable = "plaintext-only"; } catch (e) { el.contentEditable = "true"; } }
+      el.spellcheck = true; el.classList.add("ed");
+    } else { el.removeAttribute("contenteditable"); el.classList.remove("ed"); }
+  });
+  document.body.classList.toggle("editing", on);
+  renderBar();
+}
+function toggleInline() { setInline(!inlineOn); }
+document.addEventListener("input", e => {
+  const el = e.target.closest ? e.target.closest(".ed") : null;
+  if (!el || !inlineOn) return;
+  const key = keyOf(el);
+  let v = HTML_KEYS.has(key) ? el.innerHTML : el.textContent;
+  v = v.replace(/\u00a0/g, " ").replace(/[\r\n]+/g, " ");
+  if (HTML_KEYS.has(key)) v = v.replace(/<(?!\/?span\b)[^>]*>/gi, " ").replace(/&nbsp;/g, " ").replace(/\s+/g, " ");
+  setEdit(lang, key, v.trim());
+  const ta = document.getElementById("f_" + key);
+  if (ta) ta.value = CONTENT[lang][key];
+});
+document.addEventListener("keydown", e => {
+  if (e.key === "Enter" && e.target.classList && e.target.classList.contains("ed")) { e.preventDefault(); e.target.blur(); }
+  if (e.ctrlKey && e.shiftKey && (e.key === "E" || e.key === "e")) { e.preventDefault(); enterEditMode(); }
+});
+document.addEventListener("click", e => {
+  if (!inlineOn) return;
+  const a = e.target.closest ? e.target.closest("a.ed") : null;
+  if (a) e.preventDefault();   /* while editing, a click on a link places the cursor */
+});
+document.addEventListener("paste", e => {
+  const el = e.target.closest ? e.target.closest(".ed") : null;
+  if (!el) return;
+  e.preventDefault();
+  const text = ((e.clipboardData || window.clipboardData).getData("text/plain") || "").replace(/[\r\n]+/g, " ");
+  document.execCommand("insertText", false, text);
+});
+document.addEventListener("focusout", e => { if (e.target.classList && e.target.classList.contains("ed")) setTimeout(render, 0); });
+
+/* ---------- edit bar ---------- */
+let statusState = "";
+function setStatus(s) { statusState = s; renderBar(); }
+function renderBar() {
+  const n = Object.keys(EDITS[lang]).length;
+  document.getElementById("ebLang").textContent = lang === "zh" ? "正在编辑中文网站" : "Editing the English site";
+  document.getElementById("ebHint").textContent = inlineOn
+    ? (lang === "zh" ? "点击页面上的任何文字即可修改。" : "Click any text on the page and type.")
+    : (lang === "zh" ? "编辑已暂停，链接可以正常点击。" : "Editing is paused, so links work normally.");
+  document.getElementById("ebToggle").textContent = inlineOn ? "Editing: on" : "Editing: off";
+  document.getElementById("ebUndo").textContent = undoArmed ? "Click again to undo" : "Undo my edits (" + n + ")";
+  document.getElementById("ebUndo").disabled = n === 0;
+  const labels = {
+    saving: "Saving…",
+    saved: countEdits() ? "All changes saved. Damian can see them." : "No changes yet.",
+    local: "Saved in this browser only.",
+    "": ""
+  };
+  document.getElementById("ebStatus").textContent = labels[statusState] || "";
+  const primary = document.getElementById("ebPrimary");
+  if (MOCK) { primary.textContent = "Copy my changes"; primary.hidden = statusState === "saved" || statusState === "saving"; }
+}
+let undoArmed = false;
+function undoLanguage() {
+  if (!undoArmed) { undoArmed = true; renderBar(); setTimeout(() => { undoArmed = false; renderBar(); }, 4000); return; }
+  undoArmed = false;
+  EDITS[lang] = {};
+  rebuild(); localDirty = true; saveLocal(); scheduleSync();
+  render();
+  if (document.getElementById("editorPanel").classList.contains("open")) buildEditor();
+}
+
+/* ---------- list view: one language at a time ---------- */
+const GROUPS = [
+  ["1 · Top of page and video", ["hero_kicker", "hero_title", "hero_sub", "video_cta", "video_placeholder", "cta_book", "cta_more", "badge1_t", "badge1_s", "badge2_t", "badge2_s", "badge3_t", "badge3_s", "photo_alt"]],
+  ["2 · About", ["about_kicker", "about_title", "about_p1", "about_p2", "about_p3", "cred_title", "cred_1", "cred_2", "cred_3", "cred_4", "cred_5", "cred_6"]],
+  ["3 · Conditions", ["cond_kicker", "cond_title", "cond_lede", "cond_1", "cond_2", "cond_3", "cond_4", "cond_5", "cond_6", "cond_7", "cond_8", "cond_urgent"]],
+  ["4 · Services and what to expect", ["svc_kicker", "svc_title", "svc1_t", "svc1_p", "svc2_t", "svc2_p", "svc3_t", "svc3_p", "svc4_t", "svc4_p", "visit_title", "visit1_t", "visit1_p", "visit2_t", "visit2_p", "visit3_t", "visit3_p"]],
+  ["5 · Contact", ["ct_kicker", "ct_title", "ct_lede", "ct_btn", "ct_profile", "ct_phone", "ct_email", "ct_addr", "ct_addr_v", "ct_web"]],
+  ["6 · Menu and footer", ["nav_about", "nav_conditions", "nav_services", "nav_contact", "nav_book", "foot", "foot_note", "foot_gmc"]]
+];
+const CONFIG_FIELDS = [
+  ["bookingUrl", "Booking link (all Book buttons)"],
+  ["profileUrl", "MEDii profile link"],
+  ["videoUrlEn", "Video, English (file name, YouTube or Vimeo link)"],
+  ["videoUrlZh", "Video, 中文 (file name, YouTube or Vimeo link)"],
+  ["posterUrl", "Video cover image file"],
+  ["photoUrl", "About photo file (leave empty to hide)"]
+];
+function buildEditor() {
+  const body = document.getElementById("epBody");
+  const openGroups = Array.from(body.querySelectorAll("details")).map(d => d.open);
+  body.innerHTML = "";
+  document.getElementById("epTitle").textContent = "All text · " + (lang === "zh" ? "中文" : "English");
+  GROUPS.forEach(([title, keys], gi) => {
+    const det = document.createElement("details");
+    det.className = "ep-group";
+    det.open = openGroups.length ? !!openGroups[gi] : gi === 0;
+    const s = document.createElement("summary"); s.textContent = title; det.appendChild(s);
+    keys.forEach(key => {
+      const f = document.createElement("div"); f.className = "ep-field";
+      const l = document.createElement("label"); l.htmlFor = "f_" + key;
+      l.textContent = key + (HTML_KEYS.has(key) ? "  (HTML allowed)" : "");
+      const ta = document.createElement("textarea");
+      ta.id = "f_" + key;
+      ta.value = CONTENT[lang][key] !== undefined ? CONTENT[lang][key] : "";
+      ta.rows = ta.value.length > 70 ? 3 : 1;
+      ta.addEventListener("input", () => { setEdit(lang, key, ta.value); render(); });
+      f.appendChild(l); f.appendChild(ta); det.appendChild(f);
+    });
+    body.appendChild(det);
+  });
+  const cfgWrap = document.createElement("details");
+  cfgWrap.className = "ep-group";
+  cfgWrap.open = openGroups.length ? !!openGroups[GROUPS.length] : false;
+  const sum = document.createElement("summary"); sum.textContent = "Links, video and photos (both languages)";
+  cfgWrap.appendChild(sum);
+  const cfgDiv = document.createElement("div"); cfgDiv.className = "ep-config";
+  CONFIG_FIELDS.forEach(([key, label]) => {
+    const lab = document.createElement("label"); lab.className = "block"; lab.textContent = label;
+    const inp = document.createElement("input"); inp.type = "text"; inp.id = "cfg_" + key; inp.value = CONTENT.config[key] || "";
+    inp.addEventListener("input", () => { setEdit("config", key, inp.value.trim()); render(); });
+    lab.appendChild(inp); cfgDiv.appendChild(lab);
+  });
+  const lab = document.createElement("label");
+  const chk = document.createElement("input"); chk.type = "checkbox"; chk.id = "cfg_videoPlaceholder"; chk.checked = !!CONTENT.config.videoPlaceholder;
+  chk.addEventListener("change", () => { setEdit("config", "videoPlaceholder", chk.checked); render(); });
+  lab.appendChild(chk); lab.appendChild(document.createTextNode(" Show a 'video coming soon' button until a video is added"));
+  cfgDiv.appendChild(lab);
+  cfgWrap.appendChild(cfgDiv); body.appendChild(cfgWrap);
+}
+function toggleEditor() {
+  const p = document.getElementById("editorPanel");
+  if (!p.classList.contains("open")) buildEditor();
+  p.classList.toggle("open");
+}
+
+/* ---------- saving ---------- */
+function changesText() {
+  const lines = [];
+  LANGS.forEach(lg => {
+    Object.keys(EDITS[lg]).forEach(k => lines.push("[" + (lg === "en" ? "EN" : "中文") + "] " + k + ": " + EDITS[lg][k]));
+  });
+  Object.keys(EDITS.config).forEach(k => lines.push("[setting] " + k + ": " + EDITS.config[k]));
+  return lines.length ? "My wording changes for drsamliu.com:\n" + lines.join("\n") : "";
+}
+function copyChanges() {
+  const text = changesText();
+  const box = document.getElementById("epCopyBox"), note = document.getElementById("epNote");
+  if (!text) { document.getElementById("ebStatus").textContent = "No changes yet."; return; }
+  const fallback = () => {
+    if (!document.getElementById("editorPanel").classList.contains("open")) toggleEditor();
+    box.value = text; box.hidden = false; box.focus(); box.select();
+    note.textContent = "Select the text below, copy it, and paste it into the chat with Damian.";
+  };
+  try {
+    navigator.clipboard.writeText(text).then(() => { document.getElementById("ebStatus").textContent = "Copied. Paste it into the chat with Damian."; }, fallback);
+  } catch (e) { fallback(); }
+}
+function exportSite() {
+  const json = JSON.stringify(CONTENT, null, 1).replace(/</g, "\\u003c");
+  const startMark = "<!--CONTENT_JSON_START-->";
+  const endMark = "<!--CONTENT_JSON_END-->";
+  const si = PRISTINE.indexOf(startMark);
+  const ei = PRISTINE.indexOf(endMark);
+  if (si === -1 || ei === -1) return;
+  const block = startMark + '\n<script id="content-data" type="application/json">\n' + json + '\n<\/script>\n' + endMark;
+  const out = PRISTINE.slice(0, si) + block + PRISTINE.slice(ei + endMark.length);
+  const blob = new Blob([out], { type: "text/html;charset=utf-8" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.setAttribute("download", "index.html");
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+}
+function primaryAction() { if (MOCK) copyChanges(); else exportSite(); }
+
+/* in the preview, edits also save to the page's own store so they can be picked up without copy and paste */
+let db = null, dbReady = false, syncTimer = null, writing = false, writeAgain = false;
+function scheduleSync() {
+  if (!dbReady) { setStatus(MOCK ? "local" : ""); return; }
+  statusState = "saving";
+  clearTimeout(syncTimer);
+  syncTimer = setTimeout(pushNow, 1200);
+}
+async function pushNow() {
+  if (!dbReady) return;
+  if (writing) { writeAgain = true; return; }
+  writing = true; setStatus("saving");
+  try {
+    await db.doc("site/edits").set({ en: EDITS.en, zh: EDITS.zh, config: EDITS.config, updatedAt: new Date().toISOString() });
+    localDirty = false; saveLocal(); setStatus("saved");
+  } catch (e) { setStatus("local"); }
+  writing = false;
+  if (writeAgain) { writeAgain = false; pushNow(); }
+}
+async function initDb() {
+  try { db = (window.claude && window.claude.use) ? await window.claude.use("db") : null; } catch (e) { db = null; }
+  if (!db) { setStatus("local"); return; }
+  try {
+    const snap = await db.doc("site/edits").get();
+    const remote = snap.exists ? prune(snap.data()) : null;
+    if (remote && localDirty) SECTIONS.forEach(s => { EDITS[s] = Object.assign({}, remote[s], EDITS[s]); });
+    else if (remote) EDITS = remote;
+    EDITS = prune(EDITS);
+    rebuild(); saveLocal(); render();
+    if (document.getElementById("editorPanel").classList.contains("open")) buildEditor();
+    dbReady = true;
+    if (localDirty || (!remote && countEdits())) pushNow(); else setStatus("saved");
+  } catch (e) { setStatus("local"); }
+}
+
+function enterEditMode() {
+  if (!editMode) { editMode = true; loadLocal(); rebuild(); }
+  document.getElementById("editBar").hidden = false;
+  document.body.classList.add("has-editbar");
+  setInline(true);
+  render();
+}
+window.addEventListener("hashchange", () => { if (location.hash === "#edit") enterEditMode(); });
+
+render();
+if (editMode) { enterEditMode(); if (MOCK) initDb(); }
+</script>
+<!--BODY_END-->
 </body>
 </html>
