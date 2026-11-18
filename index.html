@@ -162,8 +162,9 @@
   .section-title { font-size: clamp(1.8rem, 3.8vw, 2.4rem); color: var(--green); margin-bottom: 28px; }
   .section-lede { font-size: 1.04rem; max-width: 680px; margin: -10px 0 30px; }
 
-  .about-grid { display: grid; grid-template-columns: 330px minmax(0, 1fr); gap: 56px; align-items: start; }
-  .about-photo img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; border-radius: 18px; box-shadow: 0 20px 46px var(--shadow); }
+  .about-grid { display: grid; grid-template-columns: 400px minmax(0, 1fr); gap: 56px; align-items: start; }
+  .about-photo img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: center top; border-radius: 18px; box-shadow: 0 20px 46px var(--shadow); }
+  .about-photo figcaption { font-size: 0.8rem; color: var(--muted); margin-top: 12px; }
   .about-text { min-width: 0; }
   .about-text p { margin-bottom: 18px; font-size: 1.04rem; max-width: 68ch; }
   .cred-card { margin-top: 44px; background: var(--paper); border: 1px solid var(--line); border-top: 4px solid var(--red); border-radius: 16px; padding: 28px 32px; }
@@ -264,7 +265,7 @@
   @media (max-width: 920px) {
     .nav-links { display: none; }
     .about-grid, .contact-inner { grid-template-columns: 1fr; gap: 36px; }
-    .about-photo { max-width: 300px; }
+    .about-photo { max-width: 380px; }
     header { padding-block: 108px 60px; }
     section { padding-block: 62px; }
     .vsl-play-ico { width: 58px; height: 58px; }
@@ -315,7 +316,7 @@
   "hero_sub": "毕业于伦敦UCL医学院，并曾于欧洲最大的心脏中心之一接受专业培训。凭借逾万次心脏专科诊疗经验，全心守护您的心脏健康。",
   "cta_book": "预约就诊",
   "cta_more": "了解更多",
-  "badge1_t": "内外全科医学MBBS · 英国皇家内科医师学会会员 MRCP（伦敦）",
+  "badge1_t": "内外全科医学MBBS · 皇家内科学院院士（伦敦）",
   "badge1_s": "",
   "badge2_t": "心脏及大内科双专科主任级医师",
   "badge2_s": "",
@@ -326,6 +327,7 @@
   "video_placeholder": "自我介绍视频",
   "about_kicker": "",
   "about_title": "有些心脏不适并不是严重心脏病，而是一道需要一起弄清楚的难题。我的工作，就是帮您把这道题解开。",
+  "about_caption": "",
   "about_p1": "我毕业于英国伦敦大学学院（UCL）医学院，之后在伦敦多家教学医院接受了十余年的临床培训，并在欧洲最大的心脏中心之一——Barts Heart Centre 完成心脏专科培训，专攻心力衰竭、心脏瓣膜病及心脏影像等亚专业方向。",
   "about_p2": "目前我在英国 NHS 担任心脏科主任级医师，同时在伦敦市中心的脉德医疗接诊私人患者，担任医疗总监，为许多国际及华语患者服务。",
   "about_p3": "我注重整体评估和清楚解释。心脏问题常常和高血压、糖尿病、血脂异常、甲状腺，甚至心理问题等同时存在，我会结合全身情况判断，而不是只盯着心脏一个器官；需要做什么检查就安排什么，不做不必要的检查。看诊时详细问诊、亲自检查，最后给您清楚的解释和明确的治疗方案——担心心脏已经让人焦虑，看诊不应该再匆忙。",
@@ -334,7 +336,7 @@
   "cred_2": "脉德医疗医疗总监",
   "cred_3": "NHS 公立医疗任职医院：皇家自由医院组 - 北米德尔塞克斯大学医院 心脏内科主任级医师及临床质量与安全总负责人",
   "cred_4": "伦敦大学学院（UCL）临床医学院毕业",
-  "cred_5": "英国皇家内科医师学会会员 MRCP（伦敦）",
+  "cred_5": "英国皇家内科医师学会院士 FRCP（伦敦）",
   "cred_6": "前巴茨心脏中心名誉主任医师",
   "svc_kicker": "服务",
   "svc_title": "心脏科服务",
@@ -425,7 +427,7 @@
       <a class="btn btn-outline" href="#about" data-i18n="cta_more">了解更多</a>
     </div>
     <div class="hero-badges">
-      <div class="badge"><b data-i18n="badge1_t">内外全科医学MBBS · 英国皇家内科医师学会会员 MRCP（伦敦）</b><span data-i18n="badge1_s"></span></div>
+      <div class="badge"><b data-i18n="badge1_t">内外全科医学MBBS · 皇家内科学院院士（伦敦）</b><span data-i18n="badge1_s"></span></div>
       <div class="badge"><b data-i18n="badge2_t">心脏及大内科双专科主任级医师</b><span data-i18n="badge2_s"></span></div>
       <div class="badge"><b data-i18n="badge3_t"></b><span data-i18n="badge3_s"></span></div>
     </div>
@@ -438,7 +440,7 @@
     <div class="kicker" data-i18n="about_kicker"></div>
     <h2 class="section-title" data-i18n="about_title">有些心脏不适并不是严重心脏病，而是一道需要一起弄清楚的难题。我的工作，就是帮您把这道题解开。</h2>
     <div class="about-grid" id="aboutGrid">
-      <div class="about-photo"><img id="aboutPhoto" src="dr-sam-liu.jpg" alt="伦敦心内科主任级医生 - （Dr Sam Liu）" width="960" height="1198" loading="lazy"></div>
+      <figure class="about-photo"><img id="aboutPhoto" src="dr-sam-liu.jpg" alt="伦敦心内科主任级医生 - （Dr Sam Liu）" width="900" height="900" loading="lazy"><figcaption data-i18n="about_caption"></figcaption></figure>
       <div class="about-text">
         <p data-i18n="about_p1">我毕业于英国伦敦大学学院（UCL）医学院，之后在伦敦多家教学医院接受了十余年的临床培训，并在欧洲最大的心脏中心之一——Barts Heart Centre 完成心脏专科培训，专攻心力衰竭、心脏瓣膜病及心脏影像等亚专业方向。</p>
         <p data-i18n="about_p2">目前我在英国 NHS 担任心脏科主任级医师，同时在伦敦市中心的脉德医疗接诊私人患者，担任医疗总监，为许多国际及华语患者服务。</p>
@@ -452,7 +454,7 @@
         <li data-i18n="cred_2">脉德医疗医疗总监</li>
         <li data-i18n="cred_3">NHS 公立医疗任职医院：皇家自由医院组 - 北米德尔塞克斯大学医院 心脏内科主任级医师及临床质量与安全总负责人</li>
         <li data-i18n="cred_4">伦敦大学学院（UCL）临床医学院毕业</li>
-        <li data-i18n="cred_5">英国皇家内科医师学会会员 MRCP（伦敦）</li>
+        <li data-i18n="cred_5">英国皇家内科医师学会院士 FRCP（伦敦）</li>
         <li data-i18n="cred_6">前巴茨心脏中心名誉主任医师</li>
       </ul>
     </div>
@@ -678,7 +680,7 @@ function render() {
   photo.parentElement.hidden = !cfg.photoUrl;
   document.getElementById("aboutGrid").style.gridTemplateColumns = cfg.photoUrl ? "" : "1fr";
   if (cfg.photoUrl && photo.getAttribute("src") !== cfg.photoUrl) photo.src = cfg.photoUrl;
-  photo.alt = dict.photo_alt || "";
+  photo.alt = dict.about_caption || dict.photo_alt || "";
   renderVideo();
   if (editMode) renderBar();
 }
@@ -830,7 +832,7 @@ function undoLanguage() {
 /* ---------- list view: one language at a time ---------- */
 const GROUPS = [
   ["1 · Top of page and video", ["hero_kicker", "hero_title", "hero_sub", "video_cta", "video_placeholder", "cta_book", "cta_more", "badge1_t", "badge1_s", "badge2_t", "badge2_s", "badge3_t", "badge3_s", "photo_alt"]],
-  ["2 · About", ["about_kicker", "about_title", "about_p1", "about_p2", "about_p3", "cred_title", "cred_1", "cred_2", "cred_3", "cred_4", "cred_5", "cred_6"]],
+  ["2 · About", ["about_kicker", "about_title", "about_caption", "about_p1", "about_p2", "about_p3", "cred_title", "cred_1", "cred_2", "cred_3", "cred_4", "cred_5", "cred_6"]],
   ["3 · Conditions", ["cond_kicker", "cond_title", "cond_lede", "cond_1", "cond_2", "cond_3", "cond_4", "cond_5", "cond_6", "cond_7", "cond_8", "cond_urgent"]],
   ["4 · Services and what to expect", ["svc_kicker", "svc_title", "svc1_t", "svc1_p", "svc2_t", "svc2_p", "svc3_t", "svc3_p", "svc4_t", "svc4_p", "visit_title", "visit1_t", "visit1_p", "visit2_t", "visit2_p", "visit3_t", "visit3_p"]],
   ["5 · Contact", ["ct_kicker", "ct_title", "ct_lede", "ct_btn", "ct_profile", "ct_phone", "ct_email", "ct_addr", "ct_addr_v", "ct_web"]],
