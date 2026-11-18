@@ -293,6 +293,8 @@
  "config": {
   "bookingUrl": "https://www.mediihealth.com/en/find-care",
   "profileUrl": "https://www.mediihealth.com/en/team/simiao-liu",
+  "bookingUrlZh": "https://www.mediihealth.com/zh/find-care",
+  "profileUrlZh": "https://www.mediihealth.com/zh/team/simiao-liu",
   "photoUrl": "dr-sam-liu.jpg",
   "posterUrl": "video-poster.jpg",
   "videoUrlEn": "",
@@ -389,7 +391,7 @@
       <a href="#conditions" data-i18n="nav_conditions">常见病症</a>
       <a href="#services" data-i18n="nav_services">服务</a>
       <a href="#contact" data-i18n="nav_contact">联系</a>
-      <a class="nav-book" data-booking href="https://www.mediihealth.com/en/find-care" target="_blank" rel="noopener" data-i18n="nav_book">预约</a>
+      <a class="nav-book" data-booking href="https://www.mediihealth.com/zh/find-care" target="_blank" rel="noopener" data-i18n="nav_book">预约</a>
     </div>
     <div class="lang-switch" role="group" aria-label="Language / 语言">
       <button id="btnEn" type="button" onclick="setLang('en')" class="active" aria-label="English" aria-pressed="true">
@@ -419,7 +421,7 @@
       </div>
     </div>
     <div class="hero-ctas">
-      <a class="btn btn-light" data-booking href="https://www.mediihealth.com/en/find-care" target="_blank" rel="noopener" data-i18n="cta_book">预约就诊</a>
+      <a class="btn btn-light" data-booking href="https://www.mediihealth.com/zh/find-care" target="_blank" rel="noopener" data-i18n="cta_book">预约就诊</a>
       <a class="btn btn-outline" href="#about" data-i18n="cta_more">了解更多</a>
     </div>
     <div class="hero-badges">
@@ -518,8 +520,8 @@
       <h2 class="section-title" data-i18n="ct_title">预约就诊</h2>
       <p class="lede" data-i18n="ct_lede">就诊预约通过 MEDii 进行。MEDii 位于伦敦市中心，距 Euston 和 King's Cross St Pancras 车站步行仅数分钟。无需 GP 转诊，通常可安排当天或次日就诊。</p>
       <div class="contact-actions">
-        <a class="btn btn-light" data-booking href="https://www.mediihealth.com/en/find-care" target="_blank" rel="noopener" data-i18n="ct_btn">通过 MEDii 预约</a>
-        <a class="text-link-light" id="profileLink" href="https://www.mediihealth.com/en/team/simiao-liu" target="_blank" rel="noopener" data-i18n="ct_profile">查看我在 MEDii 的介绍</a>
+        <a class="btn btn-light" data-booking href="https://www.mediihealth.com/zh/find-care" target="_blank" rel="noopener" data-i18n="ct_btn">通过 MEDii 预约</a>
+        <a class="text-link-light" id="profileLink" href="https://www.mediihealth.com/zh/team/simiao-liu" target="_blank" rel="noopener" data-i18n="ct_profile">查看我在 MEDii 的介绍</a>
       </div>
     </div>
     <div class="contact-card">
@@ -668,8 +670,10 @@ function render() {
   const en = document.getElementById("btnEn"), zh = document.getElementById("btnZh");
   en.classList.toggle("active", lang === "en"); en.setAttribute("aria-pressed", lang === "en");
   zh.classList.toggle("active", lang === "zh"); zh.setAttribute("aria-pressed", lang === "zh");
-  document.querySelectorAll("[data-booking]").forEach(a => { if (cfg.bookingUrl) a.href = cfg.bookingUrl; });
-  if (cfg.profileUrl) document.getElementById("profileLink").href = cfg.profileUrl;
+  const bookUrl = lang === "zh" ? (cfg.bookingUrlZh || cfg.bookingUrl) : cfg.bookingUrl;
+  const profUrl = lang === "zh" ? (cfg.profileUrlZh || cfg.profileUrl) : cfg.profileUrl;
+  document.querySelectorAll("[data-booking]").forEach(a => { if (bookUrl) a.href = bookUrl; });
+  if (profUrl) document.getElementById("profileLink").href = profUrl;
   const photo = document.getElementById("aboutPhoto");
   photo.parentElement.hidden = !cfg.photoUrl;
   document.getElementById("aboutGrid").style.gridTemplateColumns = cfg.photoUrl ? "" : "1fr";
@@ -833,8 +837,10 @@ const GROUPS = [
   ["6 · Menu and footer", ["nav_about", "nav_conditions", "nav_services", "nav_contact", "nav_book", "foot", "foot_note", "foot_gmc"]]
 ];
 const CONFIG_FIELDS = [
-  ["bookingUrl", "Booking link (all Book buttons)"],
-  ["profileUrl", "MEDii profile link"],
+  ["bookingUrl", "Booking link, English site"],
+  ["bookingUrlZh", "Booking link, 中文 site"],
+  ["profileUrl", "MEDii profile link, English site"],
+  ["profileUrlZh", "MEDii profile link, 中文 site"],
   ["videoUrlEn", "Video, English (file name, YouTube or Vimeo link)"],
   ["videoUrlZh", "Video, 中文 (file name, YouTube or Vimeo link)"],
   ["posterUrl", "Video cover image file"],
